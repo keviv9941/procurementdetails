@@ -1,0 +1,43 @@
+<web-app>
+<context-param>
+<param-name>driver</param-name>
+<param-value>oracle.jdbc.driver.OracleDriver</param-value>
+</context-param>
+<context-param>
+<param-name>url</param-name>
+<param-value>Jdbc:oracle:thin:@localhost:1521:xe</param-value>
+</context-param>
+<context-param>
+    <param-name>user</param-name>
+    <param-value>system</param-value>
+  </context-param>
+  <context-param>
+    <param-name>pwd</param-name>
+    <param-value>oracle</param-value>
+  </context-param>
+  <servlet>
+  <servlet-name>s1</servlet-name>
+  <servlet-class>com.nt.servlet.SigninServlet</servlet-class>
+  </servlet>
+   <servlet>
+  <servlet-name>s2</servlet-name>
+  <servlet-class>com.nt.servlet.SignupServlet</servlet-class>
+  </servlet>
+  <servlet>
+  <servlet-name>s3</servlet-name>
+  <servlet-class>com.nt.servlet.RegistrationServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>s1</servlet-name>
+    <url-pattern>/signin</url-pattern>
+  </servlet-mapping>
+      <servlet-mapping>
+    <servlet-name>s2</servlet-name>
+    <url-pattern>/signup</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>s3</servlet-name>
+    <url-pattern>/registration</url-pattern>
+  </servlet-mapping>
+  
+</web-app>
